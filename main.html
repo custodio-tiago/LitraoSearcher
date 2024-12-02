@@ -9,14 +9,21 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand ms-3" href="#">LitraoSearcher</a>
-        <button class="btn btn-outline-danger me-3" id="logoutButton">Logout</button>
+    <nav class="navbar navbar-light bg-warning">
+        <a class="navbar-brand ms-3 text-dark d-flex align-items-center" href="#">
+            <img src="logotipo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+            LitraoSearcher
+        </a>
+        <button class="btn btn-danger me-3" id="logoutButton">Logout</button>
     </nav>
+    
     <div class="container mt-3">
-        <h4 id="welcomeMessage"></h4>
+        <h4 id="welcomeMessage" class="mb-4"></h4>
         <div id="map" style="height: 500px;"></div>
     </div>
+    <footer class="footer">
+        Criado por Tiago Luis Custódio - Nenhum Direito Reservado - 2024
+    </footer>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>

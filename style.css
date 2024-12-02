@@ -1,25 +1,73 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff9db;
+    background-color: #f5f5dc;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    color: #f4a742;
-}
-
-.navbar {
+/* Navbar and Footer */
+.navbar, .footer {
     background-color: #ffd700;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
 }
 
-#map {
-    border: 2px solid #f4a742;
+.footer {
+    font-size: 14px;
+    margin-top: 50px;
 }
 
+.footer.fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Buttons */
 button {
     background-color: #f4a742;
     color: white;
+    border: none;
 }
 
 button:hover {
     background-color: #d38e29;
+}
+
+/* Login Form */
+.login-form {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Map */
+#map {
+    border: 2px solid #f4a742;
+}
+
+/* Popup Styling */
+.leaflet-popup-content-wrapper {
+    border: 2px solid #f4a742;
+    border-radius: 8px;
+    background-color: #fffaf0;
+}
+
+.leaflet-popup-content button {
+    margin-top: 10px;
+}
+
+.leaflet-popup-content input {
+    margin-bottom: 5px;
+    width: 100%;
 }
