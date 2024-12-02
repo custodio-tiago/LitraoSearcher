@@ -1,7 +1,8 @@
 // In-memory user database
 const users = [
     { username: "admin", password: "admin" },
-    { username: "user", password: "user" },
+    { username: "tiago", password: "tiago" },
+    { username: "maria", password: "maria" },
 ];
 
 // Global state
