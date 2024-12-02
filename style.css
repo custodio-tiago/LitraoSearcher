@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff9db;
+}
+
+h1 {
+    color: #f4a742;
+}
+
+.navbar {
+    background-color: #ffd700;
+}
+
+#map {
+    border: 2px solid #f4a742;
+}
+
+button {
+    background-color: #f4a742;
+    color: white;
+}
+
+button:hover {
+    background-color: #d38e29;
+}
