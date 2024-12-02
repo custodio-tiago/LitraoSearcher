@@ -1,2 +1,2 @@
 # LitraoSearcher
-Rede social de marcação de bares bons com litrão baratos em mapa
+Marcação de bares bons com litrão barato em mapa
