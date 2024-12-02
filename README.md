@@ -1,5 +1,5 @@
 # LitraoSearcher 🗺️🍻
-Bem-vindo ao LitraoSearcher, uma aplicação web interativa que permite aos usuários registrar e visualizar locais de bares no mapa. Com o poder do Leaflet.js e uma interface simples, o LitraoSearcher ajuda você a marcar bares em sua cidade, adicionar descrições e facilmente gerenciar essas marcações!
+Bem-vindo ao LitraoSearcher, uma aplicação web interativa que permite aos usuários registrar e visualizar locais de bares no mapa. Com o poder do Leaflet.js e OpenStreetMap e uma interface simples, o LitraoSearcher ajuda você a marcar bares em sua cidade, adicionar descrições e facilmente gerenciar essas marcações!
 
 ## Funcionalidades 🚀
 - Login Simples: Autenticação simples com um banco de dados em memória.
@@ -19,7 +19,7 @@ Bem-vindo ao LitraoSearcher, uma aplicação web interativa que permite aos usu�
 
 ## Tecnologias Utilizadas 🛠️
 - Frontend: HTML, CSS, JavaScript
-- Mapas: Leaflet.js
+- Mapas: Leaflet.js, OpenStreetMap
 - Framework CSS: Bootstrap 5
 - Armazenamento: LocalStorage (para salvar as marcações dos usuários)
 
