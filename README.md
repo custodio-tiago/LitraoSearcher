@@ -1,7 +1,18 @@
-# LitraoSearcher
-Marcação de bares bons com litrão barato em mapa
-![image](https://github.com/user-attachments/assets/e6c4340f-5fba-4e18-aff0-4ab00d2cca18)
+# LitraoSearcher 🗺️🍻
+Bem-vindo ao LitraoSearcher, uma aplicação web interativa que permite aos usuários registrar e visualizar locais de bares no mapa. Com o poder do Leaflet.js e uma interface simples, o LitraoSearcher ajuda você a marcar bares em sua cidade, adicionar descrições e facilmente gerenciar essas marcações!
 
-![image](https://github.com/user-attachments/assets/59394ff2-7190-414e-b3d9-d18f549431bc)
+## Funcionalidades 🚀
+- Login Simples: Autenticação simples com um banco de dados em memória. Apenas dois usuários padrões: admin e tiago.
+- Mapa Interativo: Adicione, visualize e remova marcas de bares diretamente no mapa.
+- Armazenamento Local: Todas as marcações são armazenadas localmente no navegador, garantindo que suas informações permaneçam mesmo após recarregar a página.
+- Gestão de Marcas: Como usuário autenticado, você pode adicionar novos locais de bares e também remover aqueles que você mesmo adicionou.
 
-![image](https://github.com/user-attachments/assets/a1ade3e7-7559-4701-b870-14ddb58a85d5)
+## Tecnologias Utilizadas 🛠️
+- Frontend: HTML, CSS, JavaScript
+- Mapas: Leaflet.js
+- Framework CSS: Bootstrap 5
+- Armazenamento: LocalStorage (para salvar as marcações dos usuários)
+
+## Como Usar 👨‍💻
+Acesse https://litraosearcher.netlify.app
+
