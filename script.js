@@ -1,10 +1,11 @@
 // In-memory user database
 const users = [
     { username: "admin", password: "admin" },
+    { username: "user", password: "user" },
 ];
 
 // Global state
-let markers = [];
+let markers = JSON.parse(localStorage.getItem("markers")) || [];
 
 // Handle login logic
 if (document.getElementById("loginForm")) {
@@ -51,11 +52,7 @@ if (window.location.pathname.endsWith("main.html")) {
 
     // Load existing markers
     markers.forEach((marker) => {
-        L.marker(marker.coords)
-            .bindPopup(
-                `<b>${marker.name}</b><br>${marker.description}<br><i>Inserted by: ${marker.user}</i>`
-            )
-            .addTo(map);
+        addMarkerToMap(marker, map, currentUser);
     });
 
     // Add marker on click
@@ -87,11 +84,8 @@ if (window.location.pathname.endsWith("main.html")) {
                     coords: [lat, lng],
                 };
                 markers.push(marker);
-                L.marker([lat, lng])
-                    .bindPopup(
-                        `<b>${name}</b><br>${description}<br><i>Inserted by: ${currentUser}</i>`
-                    )
-                    .addTo(map);
+                localStorage.setItem("markers", JSON.stringify(markers));
+                addMarkerToMap(marker, map, currentUser);
                 map.closePopup();
             }
         });
@@ -100,4 +94,37 @@ if (window.location.pathname.endsWith("main.html")) {
             map.closePopup();
         });
     });
+
+    // Add a marker to the map
+    function addMarkerToMap(marker, map, currentUser) {
+        const markerInstance = L.marker(marker.coords)
+            .addTo(map)
+            .bindPopup(() => {
+                const removeButton = 
+                    marker.user === currentUser
+                        ? `<button id="removeMarker">Remover Marcação</button><br>`
+                        : '';
+                return `
+                    <b>${marker.name}</b><br>
+                    ${marker.description}<br>
+                    <i>Inserido por: ${marker.user}</i><br>
+                    ${removeButton}
+                `;
+            });
+
+        markerInstance.on("popupopen", () => {
+            if (marker.user === currentUser) {
+                const removeBtn = document.getElementById("removeMarker");
+                if (removeBtn) {
+                    removeBtn.addEventListener("click", () => {
+                        markers = markers.filter(
+                            (m) => m.name !== marker.name || m.coords.toString() !== marker.coords.toString()
+                        );
+                        localStorage.setItem("markers", JSON.stringify(markers));
+                        map.removeLayer(markerInstance);
+                    });
+                }
+            }
+        });
+    }
 }
