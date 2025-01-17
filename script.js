@@ -21,6 +21,7 @@ if (document.getElementById("loginForm")) {
 
         if (user) {
             localStorage.setItem("currentUser", username);
+            alert(`Olá, ${username}!`);
             window.location.href = "main.html";
         } else {
             document.getElementById("errorMessage").textContent =

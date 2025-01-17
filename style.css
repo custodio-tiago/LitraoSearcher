@@ -1,14 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5dc;
+    background-color: #2b1d0e;
     margin: 0;
     padding: 0;
 }
 
 /* Navbar and Footer */
 .navbar, .footer {
-    background-color: #ffd700;
-    color: #000;
+    background-color: #964b00;
+    color: #f1e5d9;
     text-align: center;
     padding: 10px 0;
 }
@@ -26,13 +26,13 @@ body {
 
 /* Buttons */
 button {
-    background-color: #f4a742;
+    background-color: #7d4c25;
     color: white;
     border: none;
 }
 
 button:hover {
-    background-color: #d38e29;
+    background-color: #5a3218;
 }
 
 /* Login Form */
